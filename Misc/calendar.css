@@ -1,0 +1,103 @@
+.eventDogWalk{
+    border-radius:5px;
+    color:#10171C;
+    padding:5px;
+    margin:5px 0;
+    background-color:#A6F4FF;
+}
+
+.eventSchool{
+    border-radius:5px;
+    color:#10171C;
+    padding:5px;
+    margin:5px 0;
+    background-color:#BA9CE8;
+}
+
+.eventAppointment{
+    border-radius:5px;
+    color:#10171C;
+    padding:5px;
+    margin:5px 0;
+    background-color:#FF7E6D;
+}
+
+.eventBirthday{
+    border-radius:5px;
+    color:#10171C;
+    padding:5px;
+    margin:5px 0;
+    background-color:#AFFFAD;
+}
+
+.eventHoliday{
+    border-radius:5px;
+    color:#10171C;
+    padding:5px;
+    margin:5px 0;
+    background-color:#E8E193;
+}
+
+.week{
+    background-color:#eaeaea;
+    height:75px;
+    margin:0;
+    text-align:left;
+    vertical-align:top;
+}
+
+.monthHeader{
+    background-image:url(https://i.postimg.cc/1Xw67Pj5/Dog-Picture.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:300px;text-align:right;
+}
+
+ul{
+    font-size:75%;
+    list-style:none;
+    padding-left:20px;
+    padding-right:5px;
+}
+
+h1{
+    color:#FFF;
+    font-size:200%;
+    font-weight:700;
+    letter-spacing:3px;
+    padding-right:50px;
+    padding-bottom:150px;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px #000;
+    vertical-align:top;
+}
+
+table{
+    table-layout:fixed;
+    width:70%;
+}
+
+.copyrightNotice{
+    color:#FFF;
+    font-size:50%;
+    padding-right:50px;
+    text-align:right;
+    text-decoration:none;
+    vertical-align:bottom;
+}
+
+.weekdayHeader{
+    background-color:#999;
+    border-color:#ddd;
+    border-style:solid;
+    letter-spacing:1px;
+    line-height:25px;
+}
+
+.offDay{
+    background-color:#ddd;
+}
+
+body{
+    font-family:Helvetica;
+}

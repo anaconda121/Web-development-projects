@@ -1,0 +1,34 @@
+<!--Local source for code compile: file:///C:/Users/tanis/OneDrive/Desktop/Coding%20Projects/Web%20Development/JS%20Code%20Examples/Mouse.html-->
+<!DOCTYPE html>
+<head>
+    <!-- Importing JQuery Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script> 
+</head>
+<html>
+    <div id="mouseOverMe"> Put the mouse here! </div> <p>
+    <div class="highlightText"> This is some text. </div> <p>
+    <div> This is some other text. </div> <p>
+    <div class="highlightText"> This text is important, too.</div>
+</html>
+<script>
+    function makeBold() {
+        var divs = document.getElementsByClassName('highlightText');
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.color = 'red';
+            divs[i].style.fontWeight = 'bold';
+        }
+    }
+       
+    function restore() {
+        var divs = document.getElementsByClassName('highlightText');
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.color = 'black';
+            divs[i].style.fontWeight = 'normal';
+        }
+    }
+    var mouseOverMeDiv = document.getElementById('mouseOverMe'); 
+    mouseOverMeDiv.addEventListener('mouseover', makeBold);
+    mouseOverMeDiv.addEventListener('mouseout', restore);
+</script>
+</body>

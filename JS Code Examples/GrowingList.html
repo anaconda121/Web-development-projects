@@ -1,0 +1,20 @@
+<!--source for code example: file:///C:/Users/tanis/OneDrive/Desktop/Coding%20Projects/Web%20Development/JS%20Code%20Examples/GrowingList.html-->
+<!DOCTYPE html>
+<head>
+    <!-- Importing JQuery Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script> 
+</head>
+<html>
+    <input id="itemField"><p> </p>
+    <ul><span id = "list"></span></ul>
+</html>
+<script>   
+    function keyPressHandler(e)/*e = event */ {
+        if (e.keyCode == 13) /* keycode 13 = enter key */{
+            $('#list').append('<li>'+ $('#itemField').val() + '</li>');
+            $('#itemField').val('');
+        }
+    }
+    $('#itemField').keyup(keyPressHandler);
+</script>

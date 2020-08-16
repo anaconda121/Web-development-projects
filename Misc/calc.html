@@ -1,0 +1,96 @@
+<html>
+<head>
+    <script src = "jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>Simple JQuery Calculator</h1>
+  <table>
+    <tr>
+      <td colspan="4"><input id="display" name="display" onclick = "display()" /></td>
+    </tr>
+    <tr> 
+      <!-- create button and assign value to each button -->
+
+      <td><input type="button" value="1" onclick="display('1')" class ="btn btn-primary" /> </td> 
+      <td><input type="button" value="2" onclick="display('2')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="3" onclick="display('3')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="C" onclick="clr()" class = "btn btn-danger"> </td> 
+    </tr> 
+    <tr> 
+      <td><input type="button" value="4" onclick="display('4')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="5" onclick="display('5')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="6" onclick="display('6')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="=" onclick="solve()"  class = "btn btn-danger"/> </td> 
+    </tr> 
+    <tr> 
+      <td><input type="button" value="7" onclick="display('7')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="8" onclick="display('8')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="9" onclick="display('9')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="+" onclick="display('+')" class = "btn btn-success"/> </td> 
+    </tr> 
+    <tr>
+      <td><input type="button" value="0" onclick="display('0')" class ="btn btn-primary"/> </td> 
+      <td><input type="button" value="/" onclick="display('/')" class = "btn btn-success"/> </td> 
+      <td><input type="button" value="*" onclick="display('*')" class = "btn btn-success"/> </td> 
+      <td><input type="button" value="-" onclick="display('-')" class = "btn btn-success"/> </td> 
+    </tr>
+  </table>
+<style>
+  input{
+    font-size: 30px;
+  }
+  input[type="button"] { 
+    border: solid black 2px; 
+    width:100% 
+  } 
+</style>
+<script>
+/*
+$('input').mouseenter(function() {
+    $(this).css('color', 'red');
+    $(this).css('font-size', '120%');   
+});
+
+$('input').mouseleave(function() {
+    $(this).css('color', 'black');
+    $(this).css('font-size', '100%');
+});
+
+$('input').click(function() {
+    $(this).css('background-color', 'yellow');
+});
+*/
+function display(val){
+  document.getElementById("display").value+=val;
+}
+
+function solve(){
+  try{
+    var x = document.getElementById("display").value;
+    var y = eval(x);
+    document.getElementById("display").value = y;
+  }catch(e){
+    if(e instanceof SyntaxError){
+      alert("SyntaxError! Resetting All Values");
+      $("#display").val("");
+      x = 0;
+      y = 0;
+    }
+    if(e instanceof TypeError){
+      alert("TypeError! Reseting All Values");
+      $("#display").val("");
+      x = 0;
+      y = 0;
+    }
+  }
+}
+
+function clr() { 
+  document.getElementById("display").value = "" ;
+} 
+</script>
+</body>
+</html>

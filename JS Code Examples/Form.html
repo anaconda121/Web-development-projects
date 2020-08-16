@@ -1,0 +1,59 @@
+<!--source for code example on local drive: file:///C:/Users/tanis/OneDrive/Desktop/Coding%20Projects/Web%20Development/JS%20Code%20Examples/Form.html-->
+<!DOCTYPE html>
+<head>
+    <!-- Importing JQuery Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script> 
+</head>
+<html>
+    <form>
+        <!-- drop down menu -->
+        <select name="choose">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        </select> <p>
+        <!--multiple choice-->
+        <input type="radio" name="species" value="dog">Dog</input>
+        <input type="radio" name="species" value="cat">Cat</input>
+        <input type="radio" name="species" value="bird">Bird</input> <p>
+        <!-- check all box -->
+        <input type="checkbox" value="happy">Happy</input>
+        <input type="checkbox" value="cute">Cute</input>
+        <input type="checkbox" value="smart">Smart</input>
+    </form>
+    <p> I'd like to buy a new <span id="featureSpan"></span> 
+    <span id="genderSpan"></span> <span id="speciesSpan">animal</span>.
+</html>
+<script>
+    // handling select box
+    $("select[name='choose']" /*jquery selector for all elements in select tag that have the name choose*/).change(function() {
+       $('#genderSpan').html($(this /* this element refers to the select box */).val()); //takes select element and assigns the value to genderspan
+    });
+    // handling radio buttons
+    $("input:radio[name='species']").change(function() {
+       if ($(this).prop('checked')) {
+          $('#speciesSpan').html($(this).val());
+       }
+    });
+    var allChecked = [];
+    $('input:checkbox').change(function() {
+        var value = $(this).val();
+        if ($(this).prop('checked')) {
+            allChecked.push(value); // adds item if checked
+        }else {
+            var index = allChecked.indexOf(value);
+            if (index != -1)/* if index = -1, means that it was never in the array, as a precaution */{
+                allChecked.splice(index /*which element number to remove */ , 1 /*num elements to remove */); // removes unchecked value from allchecked array
+            }
+        }
+    $('#featureSpan').html('');
+        for (var i = 0; i < allChecked.length; i++) {
+            $('#featureSpan').append(allChecked[i]);
+            if (i < allChecked.length - 1){
+                $('#featureSpan').append(', ');
+            }else{
+                $('#featureSpan').append(' ');
+            }
+        }
+    });
+</script>

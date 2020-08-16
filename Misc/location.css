@@ -1,0 +1,7 @@
+.btn{
+    border-style: dashed;
+    border-color:green;
+    border-radius: 1.5px;
+    color: red;
+    background-color: lightblue;
+}

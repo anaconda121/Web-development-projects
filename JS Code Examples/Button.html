@@ -1,0 +1,29 @@
+<!--source for code example on local drive: file:///C:/Users/tanis/OneDrive/Desktop/Coding%20Projects/Web%20Development/JS%20Code%20Examples/Button.html-->
+<!DOCTYPE html>
+<head>
+    <!-- Importing JQuery Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script> 
+</head>
+<html>
+    <button id="clickMe">Click Me!</button>
+    <p>You've clicked the button</p> <span id="numClicks">0 times</span>.
+</html>
+<body>
+<script>
+    var clicks = 0;
+    function clickHandler() {
+        clicks++;
+        var numClicksSpan = document.getElementById('numClicks');
+        if (clicks == 1){
+            numClicksSpan.innerHTML = 'once';
+        }else{
+            numClicksSpan.innerHTML = clicks + ' times';
+        }
+    }
+    var button = document.getElementById('clickMe');
+    button.addEventListener('click', clickHandler); //event listener creates a relationship between function and user input, here relationship is
+                                                    //between click event of user input and clickHandler function
+</script>
+</body>
+</html>

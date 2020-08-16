@@ -1,0 +1,112 @@
+.container-5 {
+    width: 75%;
+    margin: 0 auto; /* centers relative to div */
+    margin-top: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width:1px;
+    border-color:black;
+}
+
+/* live dealer player scores */
+
+.flex-blackjack-row-1 {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #134011;
+    background-size: 1438px 570px;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 570px;
+}
+
+
+.flex-blackjack-row-1 div {
+    padding: 10px;
+    height: 350px;
+    flex: 1;
+    text-align: center;
+}
+
+#player-box, #dealer-box {
+    height: 570px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.flex-blackjack-row-1 img {
+    width: 25%;
+    padding: 10px;
+}
+
+/* blackjack commands */
+
+.flex-blackjack-row-2 div {
+    padding: 10px;
+}
+
+.flex-blackjack-row-2 button {
+    padding: 10px;
+}
+
+#blackjack-commands {
+    width: 50%;
+    height: 80%;
+}
+
+#blackjack-hit, #blackjack-stand, #blackjack-deal {
+    width: 30%;
+    height: 40%;
+}
+
+.flex-blackjack-row-2 {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #134011;
+}
+
+/* results table */
+
+.flex-blackjack-row-3 {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #134011;
+}
+
+table {
+    width:50%;
+    table-layout: fixed;
+}
+
+.flex-blackjack-row-3 {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #134011;
+    height: 110px;
+}
+
+th {
+    padding: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: #fff;
+    text-transform: uppercase;
+}
